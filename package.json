@@ -1,0 +1,11 @@
+{
+  "name": "le-contradicteur",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deck:pptx": "node tools/build-deck.mjs",
+    "serve": "node tools/static-server.mjs",
+    "test": "node tests/smoke.mjs"
+  }
+}

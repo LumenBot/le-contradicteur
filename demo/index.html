@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Démonstration simulée du Contradicteur. Rejeu visuel, données fictives, aucun appel IA.">
+    <meta name="theme-color" content="#f4f0e8">
+    <title>Démo simulée — Le Contradicteur</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body class="projector">
+    <a class="skip-link" href="#demo-main">Aller à la comparaison</a>
+
+    <header class="projector__header">
+      <a class="brand" href="../" aria-label="Le Contradicteur, retour à l’accueil">
+        <span class="brand__mark" aria-hidden="true">C</span>
+        <span>Le Contradicteur</span>
+      </a>
+      <div class="projector__status" aria-label="Statut de la démonstration">
+        <span class="status-chip status-chip--rupture">MAQUETTE SIMULÉE</span>
+        <span class="status-chip status-chip--instruction">SANDBOX · DONNÉES FICTIVES</span>
+        <span class="status-chip">AUCUN APPEL IA</span>
+      </div>
+      <nav class="projector__nav" aria-label="Navigation de la démonstration">
+        <a class="button button--small" href="../deck/">Deck</a>
+        <button class="button button--small" type="button" data-open-opinions>5 avis</button>
+      </nav>
+    </header>
+
+    <main class="projector__main" id="demo-main">
+      <section class="projector-panel" aria-labelledby="baseline-heading">
+        <div class="projector-panel__head">
+          <strong id="baseline-heading">IA généraliste</strong>
+          <span>PROMPT B0 FIGÉ · SORTIE À CAPTURER</span>
+        </div>
+        <div class="projector-panel__body">
+          <div class="projector-baseline">
+            <blockquote data-demo-prompt>« Voici mon dossier de candidature pour un comité de sélection. Qu’est-ce que tu en penses ? »</blockquote>
+            <div class="capture-placeholder">
+              <div>
+                <strong>SORTIE RÉELLE À CAPTURER</strong>
+                <p>La baseline ne se fabrique pas. Cette zone recevra la capture brute du même support, sans instruction de posture.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projector-panel" aria-labelledby="report-heading">
+        <div class="projector-panel__head">
+          <strong id="report-heading">Rapport du Contradicteur</strong>
+          <span>SANDBOX-17 · FORMAT CIBLE SIMULÉ</span>
+        </div>
+        <div class="projector-panel__body">
+          <div class="projector-report" aria-live="polite">
+            <div class="report-banner">
+              <strong data-demo-verdict>BLOQUANT — axe Désirabilité</strong>
+              <span data-demo-instruction>4/5 axes instruits</span>
+            </div>
+            <div class="report-grid">
+              <div class="report-column">
+                <section class="report-section">
+                  <h2>1 · Points de rupture</h2>
+                  <div data-demo-ruptures>
+                    <div class="rupture-item"><p>Les trois pilotes cités sont gratuits depuis quatorze mois.</p><small>A2 · L’Acheteur · levé par un premier pilote payant</small></div>
+                    <div class="rupture-item"><p>Le taux de conversion n’est relié à aucune observation des pilotes.</p><small>A5 · Le Liquidateur · levé par le taux réellement observé</small></div>
+                  </div>
+                </section>
+                <section class="report-section">
+                  <h2>2 · Convergence</h2>
+                  <p data-demo-convergence>L’Acheteur et le Liquidateur heurtent le même fait : les pilotes ne produisent ni preuve d’achat, ni taux observé.</p>
+                </section>
+                <section class="report-section">
+                  <h2>3 · Questions du comité</h2>
+                  <ol data-demo-questions>
+                    <li>Qu’est-ce que les pilotes vous ont appris ?</li>
+                    <li>Qui a refusé de payer, et pourquoi ?</li>
+                    <li>Le taux annoncé, il vient d’où ?</li>
+                    <li>Si personne ne signe d’ici décembre ?</li>
+                  </ol>
+                </section>
+              </div>
+              <div class="report-column">
+                <section class="report-section">
+                  <h2>4 · Manquant, vérifié</h2>
+                  <ul data-demo-missing>
+                    <li>Preuve de paiement</li>
+                    <li>Taux de conversion observé</li>
+                    <li>Plan de trésorerie mensuel</li>
+                  </ul>
+                </section>
+                <section class="report-section">
+                  <h2>5 · Ce qui résiste</h2>
+                  <ul data-demo-resists>
+                    <li>Le porteur connaît le métier utilisateur.</li>
+                    <li>Le produit fonctionne chez trois pilotes.</li>
+                  </ul>
+                </section>
+                <section class="report-section">
+                  <h2>6 · Non instruit</h2>
+                  <p data-demo-not-instructed>Critère équipe couvert partiellement : le noyau fondateur n’est pas documenté.</p>
+                </section>
+              </div>
+            </div>
+            <div class="report-footer">
+              <span>FORMAT CIBLE SIMULÉ · NON MESURABLE C0–C4</span>
+              <span>Ne se transmet pas au porteur · ne vaut pas avis d’admission</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="projector__footer">
+      <div class="replay-progress" aria-hidden="true" data-progress>
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <button class="button button--primary button--small" type="button" data-replay>Charger le format cible</button>
+      <span class="replay-state" data-replay-state>PRÊT · REJEU VISUEL LOCAL</span>
+    </footer>
+
+    <p class="sr-only" aria-live="polite" data-live></p>
+
+    <dialog class="agent-dialog" data-opinions-dialog aria-labelledby="opinions-title">
+      <div class="agent-dialog__head">
+        <div>
+          <p class="eyebrow">ANNEXE FUTURE</p>
+          <h2 id="opinions-title">Les cinq avis bruts</h2>
+        </div>
+        <button class="button button--small" type="button" data-close-opinions>Fermer</button>
+      </div>
+      <div class="agent-dialog__body">
+        <p>Cette annexe restera vide tant que de vraies sorties SANDBOX n’auront pas été exécutées, validées et enregistrées. La maquette n’invente aucun avis d’agent.</p>
+        <div class="agent-opinion"><div class="agent-opinion__name"><span>A1</span>L’Interchangeable</div><p>Emplacement réservé à la sortie brute.</p><span class="agent-opinion__signal">À PRODUIRE</span></div>
+        <div class="agent-opinion"><div class="agent-opinion__name"><span>A2</span>L’Acheteur</div><p>Emplacement réservé à la sortie brute.</p><span class="agent-opinion__signal">À PRODUIRE</span></div>
+        <div class="agent-opinion"><div class="agent-opinion__name"><span>A3</span>Le Déjà-Vu</div><p>Emplacement réservé à la sortie brute.</p><span class="agent-opinion__signal">À PRODUIRE</span></div>
+        <div class="agent-opinion"><div class="agent-opinion__name"><span>A4</span>Le Constructeur</div><p>Emplacement réservé à la sortie brute.</p><span class="agent-opinion__signal">À PRODUIRE</span></div>
+        <div class="agent-opinion"><div class="agent-opinion__name"><span>A5</span>Le Liquidateur</div><p>Emplacement réservé à la sortie brute.</p><span class="agent-opinion__signal">À PRODUIRE</span></div>
+      </div>
+    </dialog>
+
+    <script type="module" src="./demo.js"></script>
+  </body>
+</html>

@@ -1,19 +1,9 @@
+import { mountStoryboards } from "./assets/storyboard.js";
+
 const previewUrl = new URL("./data/ui-preview.json", import.meta.url);
 
 function text(element, value) {
   if (element && typeof value === "string") element.textContent = value;
-}
-
-function renderLabels(labels) {
-  const row = document.querySelector("[data-preview-labels]");
-  if (!row || !Array.isArray(labels)) return;
-  row.replaceChildren();
-  labels.slice(0, 3).forEach((label, index) => {
-    const chip = document.createElement("span");
-    chip.className = `status-chip${index === 0 ? " status-chip--rupture" : index === 1 ? " status-chip--instruction" : ""}`;
-    chip.textContent = label;
-    row.append(chip);
-  });
 }
 
 function renderQuestions(list, questions) {
@@ -29,8 +19,6 @@ function renderQuestions(list, questions) {
 function renderPreview(data) {
   if (data?.kind !== "ui_preview" || data?.evaluationStatus !== "NON_EVALUABLE") return;
 
-  renderLabels(data.labels);
-  text(document.querySelector("[data-baseline-prompt]"), `« ${data.baseline.prompt} »`);
   text(document.querySelector("[data-target-status]"), data.targetReport.displayStatus);
   text(document.querySelector("[data-target-verdict]"), data.targetReport.verdict);
   text(document.querySelector("[data-target-instruction]"), data.targetReport.instruction);
@@ -46,6 +34,8 @@ function renderPreview(data) {
   }
   renderQuestions(document.querySelector("[data-target-questions]"), data.targetReport.questions);
 }
+
+mountStoryboards();
 
 fetch(previewUrl)
   .then((response) => {

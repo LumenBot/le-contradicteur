@@ -4,9 +4,9 @@
   "dataRegime": "SANDBOX",
   "aiCalls": 0,
   "labels": [
-    "MAQUETTE SIMULÉE",
+    "ILLUSTRATION DE MÉTHODE · PAS UN RUN · AUCUN APPEL IA",
     "SANDBOX · DONNÉES FICTIVES",
-    "AUCUN APPEL IA",
+    "FORMAT ÉDITORIAL ÉCRIT À LA MAIN",
     "CECI N’EST PAS UN AVIS D’ADMISSION"
   ],
   "baseline": {
@@ -16,7 +16,7 @@
   "targetReport": {
     "status": "FORMAT_CIBLE_SIMULE",
     "source": "spec/02-format-de-sortie.md#3-gabarit-rempli",
-    "name": "Sandbox-17",
+    "name": "Cas d’école — gabarit de spécification",
     "displayStatus": "FORMAT CIBLE SIMULÉ",
     "provenance": "Contenu illustratif issu du gabarit de spécification. Il ne constitue ni un run, ni une fixture d’évaluation.",
     "measurement": "Non mesurable au regard de C0–C4.",

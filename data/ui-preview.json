@@ -1,0 +1,57 @@
+{
+  "kind": "ui_preview",
+  "evaluationStatus": "NON_EVALUABLE",
+  "dataRegime": "SANDBOX",
+  "aiCalls": 0,
+  "labels": [
+    "MAQUETTE SIMULÉE",
+    "SANDBOX · DONNÉES FICTIVES",
+    "AUCUN APPEL IA",
+    "CECI N’EST PAS UN AVIS D’ADMISSION"
+  ],
+  "baseline": {
+    "prompt": "Voici mon dossier de candidature pour un comité de sélection. Qu’est-ce que tu en penses ?",
+    "status": "AWAITING_CAPTURE"
+  },
+  "targetReport": {
+    "status": "FORMAT_CIBLE_SIMULE",
+    "source": "spec/02-format-de-sortie.md#3-gabarit-rempli",
+    "name": "Sandbox-17",
+    "displayStatus": "FORMAT CIBLE SIMULÉ",
+    "provenance": "Contenu illustratif issu du gabarit de spécification. Il ne constitue ni un run, ni une fixture d’évaluation.",
+    "measurement": "Non mesurable au regard de C0–C4.",
+    "verdict": "BLOQUANT — axe Désirabilité",
+    "instruction": "4/5 axes instruits",
+    "ruptures": [
+      {
+        "fact": "Les trois pilotes cités sont gratuits depuis quatorze mois.",
+        "quote": "trois pilotes engagés",
+        "owner": "A2 · L’Acheteur",
+        "lift": "Un pilote payant, même limité, signé sous six semaines."
+      },
+      {
+        "fact": "Le taux de conversion du prévisionnel n’est relié à aucune observation des pilotes.",
+        "quote": "conversion estimée à 12 %",
+        "owner": "A5 · Le Liquidateur",
+        "lift": "Le taux réellement observé, y compris s’il est mauvais."
+      }
+    ],
+    "convergence": "L’Acheteur et le Liquidateur heurtent le même fait : les pilotes ne produisent ni preuve d’achat, ni taux observé.",
+    "questions": [
+      "Vos trois pilotes tournent depuis quatorze mois. Qu’est-ce qu’ils vous ont appris que vous ne saviez pas en démarrant ?",
+      "Qui, parmi les trois, a refusé de payer, et qu’a-t-il dit exactement ?",
+      "Le taux de 12 %, il vient d’où ?",
+      "Si aucun pilote ne signe d’ici décembre, vous faites quoi ?"
+    ],
+    "missing": [
+      "Preuve de paiement par un client final",
+      "Taux de conversion observé",
+      "Plan de trésorerie mois par mois"
+    ],
+    "resists": [
+      "Le porteur connaît le métier de ses utilisateurs.",
+      "Le produit fonctionne dans trois environnements pilotes."
+    ],
+    "notInstructed": "Critère équipe couvert partiellement : la composition du noyau fondateur n’est pas documentée."
+  }
+}

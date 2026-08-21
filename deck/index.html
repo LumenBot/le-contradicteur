@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Deck web du Contradicteur — méthode, démonstration simulée et limites du prototype QAMP.">
+    <meta name="theme-color" content="#f4f0e8">
+    <title>Deck — Le Contradicteur</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body class="deck-page">
+    <a class="skip-link" href="#deck-stage">Aller à la diapositive</a>
+    <div class="deck-shell">
+      <header class="deck-header">
+        <a class="brand" href="../" aria-label="Le Contradicteur, retour à l’accueil">
+          <span class="brand__mark" aria-hidden="true">C</span>
+          <span>Le Contradicteur</span>
+        </a>
+        <div class="deck-header__meta" aria-label="Statut du deck">
+          <span class="status-chip status-chip--rupture">MAQUETTE SIMULÉE</span>
+          <span class="status-chip status-chip--instruction">SANDBOX · DONNÉES FICTIVES</span>
+          <span class="status-chip">AUCUN APPEL IA</span>
+        </div>
+        <div class="deck-controls__group">
+          <a class="button button--small" href="../demo/">Démo</a>
+          <a class="button button--small" href="../assets/downloads/le-contradicteur-deck.pptx" download>PowerPoint</a>
+          <button class="button button--small" type="button" data-notes>Notes</button>
+        </div>
+      </header>
+
+      <main class="deck-stage" id="deck-stage" aria-live="polite" aria-atomic="true"></main>
+
+      <footer class="deck-controls">
+        <div class="deck-controls__group">
+          <button class="button button--small" type="button" data-previous aria-label="Diapositive précédente">←</button>
+          <button class="button button--small" type="button" data-next aria-label="Diapositive suivante">→</button>
+          <button class="button button--small" type="button" data-fullscreen>Plein écran</button>
+        </div>
+        <div class="deck-progress" aria-label="Progression dans le deck">
+          <span data-current>01</span>
+          <span class="deck-progress__track" aria-hidden="true"><span class="deck-progress__bar" data-progress-bar></span></span>
+          <span data-total>09</span>
+        </div>
+        <span class="deck-help">← → · espace · balayage tactile</span>
+      </footer>
+    </div>
+
+    <dialog class="agent-dialog" data-notes-dialog aria-labelledby="notes-title">
+      <div class="agent-dialog__head">
+        <div>
+          <p class="eyebrow">NOTES ORATEUR</p>
+          <h2 id="notes-title">Diapositive <span data-notes-number>01</span></h2>
+        </div>
+        <button class="button button--small" type="button" data-close-notes>Fermer</button>
+      </div>
+      <div class="agent-dialog__body">
+        <p data-notes-body></p>
+        <h3>Sources internes</h3>
+        <ul data-notes-sources></ul>
+      </div>
+    </dialog>
+
+    <noscript><p class="shell">Le deck web nécessite JavaScript. Les spécifications restent disponibles dans le dépôt.</p></noscript>
+    <script type="module" src="./deck.js"></script>
+  </body>
+</html>

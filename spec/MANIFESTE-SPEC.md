@@ -18,13 +18,16 @@ Ce qui compte est la conclusion : **il n'y avait pas de source de vérité dési
 
 ---
 
-## Où est la source de vérité — deux états, un seul à la fois
+## Où est la source de vérité
 
-**Aujourd'hui, avant promotion.** `/spec` n'existe pas encore dans le dépôt. La source est donc : **les fichiers locaux, aux empreintes de ce manifeste.** Toute remarque de revue cite le SHA du fichier visé.
+Les spécifications ont été promues dans `/spec` au commit Git
+`8dfdc876cdd0f5ee82bdb21d6ccf91751e1476ed` de la branche
+`feat/landing-demo-deck`. Ce commit est la source de vérité jusqu'à son intégration
+dans `main`. Les fichiers locaux d'origine sont redevenus des brouillons.
 
-**Après le push dans `/spec`.** La source devient : **le commit Git.** Les fichiers locaux redeviennent des brouillons. Toute remarque cite le SHA du commit.
-
-Il n'y a jamais deux sources en même temps. Ce manifeste est mis à jour au moment de la bascule.
+Toute remarque de revue cite ce commit — ou le commit ultérieur de `main` qui
+intègre ces fichiers à l'identique — et, si elle vise un fichier précis, son
+empreinte indiquée ci-dessous.
 
 ---
 

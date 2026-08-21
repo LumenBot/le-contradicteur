@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lumenbot.github.io/le-contradicteur/schemas/ui-preview.schema.json",
+  "title": "Le Contradicteur — aperçu d'interface non évaluable",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "evaluationStatus",
+    "dataRegime",
+    "aiCalls",
+    "labels",
+    "baseline",
+    "targetReport"
+  ],
+  "properties": {
+    "kind": { "const": "ui_preview" },
+    "evaluationStatus": { "const": "NON_EVALUABLE" },
+    "dataRegime": { "const": "SANDBOX" },
+    "aiCalls": { "const": 0 },
+    "labels": {
+      "type": "array",
+      "minItems": 4,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "baseline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prompt", "status"],
+      "properties": {
+        "prompt": { "type": "string", "minLength": 1 },
+        "status": { "const": "AWAITING_CAPTURE" }
+      }
+    },
+    "targetReport": {
+      "type": "object",
+      "description": "Gabarit visuel simulé. Ce n'est ni un run ni une mesure expérimentale.",
+      "additionalProperties": true,
+      "required": ["status", "source"],
+      "properties": {
+        "status": { "const": "FORMAT_CIBLE_SIMULE" },
+        "source": { "const": "spec/02-format-de-sortie.md#3-gabarit-rempli" }
+      }
+    }
+  }
+}
